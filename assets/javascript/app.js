@@ -73,7 +73,7 @@ function timeoutLoss() {
 
 //Function that creates the questions
 function createQuestion() {
-    gameText = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + questions[questionCount] + "</p><p class='first-answer answer'>A. " + answers[questionCount][0] + "</p><p class='answer'>B. "+answers[questionCount][1]+"</p><p class='answer'>C. "+answers[questionCount][2]+"</p><p class='answer'>D. "+answers[questionCount][3]+"</p>";
+    gameText = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>20</span></p><p class='text-center'>" + questions[questionCount] + "</p><p class='first-answer answer'>A. " + answers[questionCount][0] + "</p><p class='answer'>B. "+answers[questionCount][1]+"</p><p class='answer'>C. "+answers[questionCount][2]+"</p><p class='answer'>D. "+answers[questionCount][3]+"</p>";
     $("#questionArea").html(gameText);
     
 };
@@ -87,7 +87,9 @@ function wait() {
         timeLeft = 20;
         timeWrapper();
     } else {
+
     (resultScreen())
+
     }
 };
 
@@ -111,20 +113,20 @@ function timeWrapper() {
 
 function resultScreen () {
     gameText = "<p>Time Remaining: <span>" + timeLeft + "</span></p>" 
-    + "<p>You have made it through the quiz!" + "</p>" + "<p>Correct Answers: " + wins 
+    + "<p>You have made it through the quiz! Here's how you did." + "</p>" + "<p>Correct Answers: " + wins 
     + "</p>" + "<p>Wrong Answers: " + losses 
     + "<p class='text-center reset-button-container'><a class='btn btn-warning btn-md btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
     $("#questionArea").html(gameText);
 }
 //Function to reset the game
 
-function gamereset() {
+function gameReset() {
     questionCount = 0;
     wins = 0;
     losses = 0;
     unanswered = 0;
     timeLeft = 20;
-    creatQuestion();
+    createQuestion();
     timeWrapper();
 }
 
@@ -157,7 +159,7 @@ var answers = [
 ["Carson, California", "Baltimore, Maryland", "Miami, Florida", "Phoenix, Arizona"],
 ["Orange and White", "Black and White", "Blue and Red", "Yellow and Blue"],
 ["Harry Kane", "Roberto Firmino", "Jamie Vardy", "Mohamed Salah"],
-["Brimingham City", "Burnley FC", "Wigan Athletic", "NewCastle United"]
+["Brimingham City", "Burnley FC", "Wigan Athletic", "Newcastle United"]
 ];
 
 var correctAnswers = [
