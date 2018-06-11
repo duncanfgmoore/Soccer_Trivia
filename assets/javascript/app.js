@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 function startScreen() {
-    startGame = "<p class='text-center main-button-container'><a class='btn btn-warning btn-md btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
+    startGame = "<p class='text-center mainButton'><a class='btn btn-info btn-md btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
     $("#questionArea").html(startGame);  
     
 };
@@ -45,7 +45,7 @@ $("body").on("click", ".reset-button", function(event) {
 // Function for correct answer
 function correctAnswer () {
     wins++;
-    gameText = "<p> Time Remaining: <span>" + timeLeft + "</span></p>" + "<p>Correct! The answer is:" + correctAnswers[questionCount] + "</p>" + "image goes here";
+    gameText = "<p class='result'> Time Remaining: <span>" + timeLeft + "</span></p>" + "<p class='result'>Correct! The answer is: " + correctAnswers[questionCount] + "</p>" + gifArray[questionCount];
     $("#questionArea").html(gameText);
 
     setTimeout(wait, 3000);
@@ -55,7 +55,7 @@ function correctAnswer () {
 
 function incorrectAnswer () {
     losses++;
-    gameText = "<p> Time Remaining: <span>" + timeLeft + "</span></p>" + "<p>Wrong! The answer is:" + correctAnswers[questionCount] + "</p>" + "image goes here";
+    gameText = "<p class='result'> Time Remaining: <span>" + timeLeft + "</span></p>" + "<p class='result'>Wrong! The answer is: " + correctAnswers[questionCount] + "</p>" + "<img src='assets/images/lose.gif'>";
     $("#questionArea").html(gameText);
 
     setTimeout(wait, 3000);
@@ -65,7 +65,7 @@ function incorrectAnswer () {
 //Function for if no choice was made
 function timeoutLoss() {
     unanswered++;
-    gameText = "<p> Time Remaining: <span>" + timeLeft + "</span></p>" + "<p>You did not submit an answer!" + correctAnswers[questionCount] + "</p>" + "image goes here";
+    gameText = "<p class='result'> Time Remaining: <span>" + timeLeft + "</span></p>" + "<p class='result'>You did not submit an answer! The answer is " + correctAnswers[questionCount] + "</p>" + "<img src='assets/images/timesup.gif'>";
     $("#questionArea").html(gameText);
 
     setTimeout(wait, 3000);
@@ -73,7 +73,7 @@ function timeoutLoss() {
 
 //Function that creates the questions
 function createQuestion() {
-    gameText = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>20</span></p><p class='text-center'>" + questions[questionCount] + "</p><p class='first-answer answer'>A. " + answers[questionCount][0] + "</p><p class='answer'>B. "+answers[questionCount][1]+"</p><p class='answer'>C. "+answers[questionCount][2]+"</p><p class='answer'>D. "+answers[questionCount][3]+"</p>";
+    gameText = "<p id='timer'>Time Remaining: <span class='timer'>20</span></p><p id='question'>" + questions[questionCount] + "</p><p class='first-answer answer'>A. " + answers[questionCount][0] + "</p><p class='answer'>B. "+answers[questionCount][1]+"</p><p class='answer'>C. "+answers[questionCount][2]+"</p><p class='answer'>D. "+answers[questionCount][3]+"</p>";
     $("#questionArea").html(gameText);
     
 };
@@ -112,10 +112,10 @@ function timeWrapper() {
 //Function for result screen between questions
 
 function resultScreen () {
-    gameText = "<p>Time Remaining: <span>" + timeLeft + "</span></p>" 
-    + "<p>You have made it through the quiz! Here's how you did." + "</p>" + "<p>Correct Answers: " + wins 
-    + "</p>" + "<p>Wrong Answers: " + losses 
-    + "<p class='text-center reset-button-container'><a class='btn btn-warning btn-md btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
+    gameText = "<p class='result'>Time Remaining: <span>" + timeLeft + "</span></p>" 
+    + "<p class='result'>You have made it through the quiz! Here's how you did." + "</p>" + "<p class='result'>Correct Answers: " + wins 
+    + "</p>" + "<p class='result'>Wrong Answers: " + losses + "</p>" + "<p class='result'>Unanswered Questions: " + unanswered + "</p>"
+    + "<p class='text-center reset-button-container'><a class='btn btn-info btn-md btn-block reset-button' href='#' role='button'>Reset The Quiz!</a></p>";
     $("#questionArea").html(gameText);
 }
 //Function to reset the game
@@ -185,3 +185,18 @@ var startGame;
 var gameRestart;
 var questionCount = 0;
 var theClock;
+
+var gifArray = new Array();
+    gifArray[0] = "<img src='assets/images/brazil.gif'>";
+    gifArray[1] = "<img src='assets/images/messi.gif'>";
+    gifArray[2] = "<img src='assets/images/goalie.gif'>";
+    gifArray[3] = "<img src='assets/images/liverpool.gif'>";
+    gifArray[4] = "<img src='assets/images/bobby.jpeg'>";
+    gifArray[5] = "<img src='assets/images/barefoot.gif'>";
+    gifArray[6] = "<img src='assets/images/chivas.gif'>";
+    gifArray[7] = "<img src='assets/images/barca.gif'>";
+    gifArray[8] = "<img src='assets/images/salah.gif'>";
+    gifArray[9] = "<img src='assets/images/newcastle.gif'>";
+
+
+

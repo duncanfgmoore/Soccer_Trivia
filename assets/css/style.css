@@ -1,0 +1,73 @@
+body {
+    background-image: url("../images/background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+    font-size: 72px;
+    color: #80ff00;
+    margin-top: 70px;
+}
+
+
+#instructions {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.btn {
+    width: 400px;
+    
+}
+
+
+
+#questionArea {
+    text-align: center;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    
+}
+
+.answer {
+    color: grey;
+    font-size: 24px;
+}
+
+#question {
+    color: white;
+    font-size: 24px;
+}
+
+#timer {
+    color: white;
+    font-size: 24px;
+}
+
+.answer {
+    background-color: #EDE6E6;
+    border-radius: 15px;
+
+}
+.answer:hover {
+    cursor: pointer;
+}
+
+.result {
+    color: white;
+    font-size: 24px;
+}
+
+img {
+    width: 400px;
+    height: 200px;
+}
+
+
+
