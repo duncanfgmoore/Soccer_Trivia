@@ -143,8 +143,8 @@ var questions = [
 "Anfield is the home of which English Premier League club?",
 "Which of these players has never played for Manchester United?",
 "Why did the Indian national team withdraw from the FIFA World Cup competition in 1950?",
-"In the MLS in what city does teh team Chivas USA play?",
-"What are teh home colors of the FC Barcelona soccer uniforms?",
+"In the MLS in what city does the team Chivas USA play?",
+"What are the home colors of the FC Barcelona soccer uniforms?",
 "Who was the leading goal scorer in the English Premier League season 2017-2018?",
 "Which of these teams is not playing in the EPL in the 2009-2010 season?"
 ];
