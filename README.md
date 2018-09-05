@@ -11,3 +11,9 @@ Trivia game that challenges the users knowledge of the soccer world and its hist
 - JQuery
 - GIPHY API
 - CSS/Bootstrap
+
+# Screen Shots
+
+![screenshot](assets/images/triviaHome.jpeg)
+
+![screenshot](assets/images/trivia.jpeg)
